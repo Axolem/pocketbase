@@ -19,7 +19,7 @@ routerAdd(
 				.select("test.id as id", "test.name as name")
 				.from("case")
 				.innerJoin("test", $dbx.exp("test.id = test"))
-				.where($dbx.exp("test.id = {:id}", { id: "v7pyb4tgbb4ibg6" }))
+				// .where($dbx.exp("test.id = {:id}", { id: "v7pyb4tgbb4ibg6" }))
 				.all(result);
 
 			return c.json(200, result);
